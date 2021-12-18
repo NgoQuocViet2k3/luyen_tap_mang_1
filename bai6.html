@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txtValue"/>
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
+<input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    let newarr = [];
+    let found = false
+
+    function add_element_to_array() {
+        array[x] = document.getElementById("txtValue").value
+        alert("Element :" + array[x] + "Added at index " + x);
+        document.getElementById("txtValue").value = "";
+        x++;
+    }
+    function display_array() {
+        for (let i = 0; i < array.length; i++) {
+            newarr.push(array[i]);
+        }
+        let num = parseInt(prompt('V:'));
+        for (let j = 0; j < newarr.length; j++) {
+            if (num === newarr[j]) {
+                found = true;
+                break;
+            }
+        }
+        if (!found){
+            document.getElementById("result").innerHTML='V is not in the array'}
+        else {
+            document.getElementById("result").innerHTML='V is in the array'}
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let integer=[2,5,6,8,9,10];
+    let index = 0;
+    let max = integer[0];
+    let sum = 0;
+    let average ;
+    for (let i = 0;i<integer.length;i++){
+        sum += integer[i];
+        average=sum/integer.length;
+        if (integer[i]>max){
+            max=integer[i];
+            index=i;
+        }
+    }
+document.write("Giá trị lớn nhất là : " + max + "giá trị trung bình của các phần tử: " + average);
+</script>
+</body>
+</html>

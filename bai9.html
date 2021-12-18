@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+let arrA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let arrB = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+let arrC=[];
+for (let i = 0; i < arrA.length; i++) {
+arrC[i] = arrA[i];
+}
+for (let i = 0; i < arrB.length; i++) {
+arrC[arrA.length + i] = arrB[i];
+}
+let message = 'Dãy A: ' + arrA + '<br>';
+message += 'Dãy B: ' + arrB + '<br>';
+message += 'Dãy C: ' + arrC + '<br>';
+document.write("Mảng C  :" + arrC)
+</script>
+</body>
+</html>
